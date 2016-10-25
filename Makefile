@@ -57,7 +57,7 @@ compile:
 		cabal install --only-dependencies && \
 		cabal install hsb2hs && \
 		cabal configure --prefix=/usr/local --flags="embed_data_files" && \
-		cabal build && \
+		cabal build \
 	;
 
 #-------------------------------------------------------------------------------
