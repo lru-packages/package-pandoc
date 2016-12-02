@@ -36,6 +36,7 @@ info:
 .PHONY: clean
 clean:
 	rm -Rf /tmp/installdir* pandoc*
+	yum -y remove cabal-install
 
 .PHONY: cleanall
 cleanall: clean
