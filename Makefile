@@ -52,7 +52,14 @@ compile:
 	git clone -q -b $(VERSION) https://github.com/jgm/pandoc.git --recursive --depth=1;
 	cd pandoc && \
 		cabal update && \
-		cabal install bytestring deepseq array hsb2hs cabal-install --reinstall  --force-reinstalls --upgrade-dependencies && \
+		cabal install \
+		    bytestring \ 
+		    deepseq \
+		    array \
+		    hsb2hs \
+		    parsec \
+		    cabal-install \
+		    --reinstall  --force-reinstalls --upgrade-dependencies && \
 		export PATH=/root/.cabal/bin:$$PATH && \
 		cabal install --only-dependencies && \
 		cabal configure --prefix=/usr/local --flags="embed_data_files" && \
