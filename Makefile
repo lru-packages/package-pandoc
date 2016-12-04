@@ -46,8 +46,11 @@ cleanall: clean
 
 .PHONY: install-deps
 install-deps:
+	wget -O /etc/yum.repos.d/petersen-ghc.repo https://copr.fedorainfracloud.org/coprs/petersen/ghc-7.10.2/repo/epel-7/petersen-ghc-7.10.2-epel-7.repo && \
+	yum clean all && \
 	yum install -y \
 		cabal-install \
+		ghc \
 	;
 
 #-------------------------------------------------------------------------------
@@ -56,11 +59,11 @@ install-deps:
 compile:
 	git clone -q -b $(VERSION) https://github.com/jgm/pandoc.git --recursive --depth=1;
 	cd pandoc && \
-		cabal update && \
-		cabal install mtl parsec transformers preprocessor-tools bytestring deepseq array hsb2hs parsec cabal-install && \
 		export PATH=/root/.cabal/bin:$$PATH && \
+		cabal update && \
 		cabal install --only-dependencies && \
-		cabal configure --prefix=/usr/local --flags="embed_data_files" && \
+		cabal install hsb2hs && \
+		cabal configure --prefix=$(PREFIX) --flags="embed_data_files" && \
 		cabal build \
 	;
 
