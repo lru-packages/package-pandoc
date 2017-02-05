@@ -61,6 +61,7 @@ compile:
 	cd pandoc && \
 		export PATH=/root/.cabal/bin:$$PATH && \
 		cabal update && \
+		cabal install happy && \
 		cabal install --only-dependencies && \
 		cabal install hsb2hs && \
 		cabal configure --prefix=$(PREFIX) --flags="embed_data_files" && \
