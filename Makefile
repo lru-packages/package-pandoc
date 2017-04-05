@@ -1,7 +1,6 @@
 NAME=pandoc
 VERSION=1.19.2.1
-EPOCH=1
-ITERATION=1
+ITERATION=1.lru
 PREFIX=/usr/local
 LICENSE=PHP
 VENDOR="John McFarlane"
@@ -90,7 +89,6 @@ package:
 		-v $(VERSION) \
 		-C /tmp/installdir-$(NAME)-$(VERSION) \
 		-m $(MAINTAINER) \
-		--epoch $(EPOCH) \
 		--iteration $(ITERATION) \
 		--license $(LICENSE) \
 		--vendor $(VENDOR) \
