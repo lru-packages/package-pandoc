@@ -1,3 +1,6 @@
+* Sat Sep 23 2017 Ryan Parman <ryan@ryanparman.com> 1.19.2.4-1
+- Bundles Pandoc 1.19.2.4.
+
 * Fri Feb 3 2017 Ryan Parman <ryan@ryanparman.com> 1.19.2.1-1
 - Bundles Pandoc 1.19.2.1.
 
