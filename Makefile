@@ -54,6 +54,7 @@ install-deps:
 	yum install -y \
 		cabal-install \
 		ghc \
+		zlib-devel \
 	;
 
 #-------------------------------------------------------------------------------
