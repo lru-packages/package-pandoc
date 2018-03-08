@@ -1,5 +1,5 @@
 NAME=pandoc
-VERSION=2.0.2
+VERSION=2.1.2
 ITERATION=1.lru
 PREFIX=/usr/local
 LICENSE=PHP
